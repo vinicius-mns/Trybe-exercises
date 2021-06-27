@@ -5,4 +5,4 @@ let contador = 0
 for(index = 0; index < numbers.length; index++){
     contador += numbers[index];   
 }   
-    console.log (contador / numbers.length);
+    console.log(contador);
