@@ -1,0 +1,111 @@
+```
+> arquivo
+>> arquivo
+```
+	cria um arquivo e coloca o conteudo dentro    
+		tudo que vem antes do (   >    ) eh colocado dentro de um arquvio
+```
+less
+```
+	faz um lista sem escrever no terminal
+		use o comando ( / ) para fazer uma busca (como se fosse um CTRL+F)
+	
+```
+mkdir
+```
+	cria um diretório
+	
+```
+touch
+```
+	cria um arquivo
+	
+```
+mv				
+```
+	move ou renomeia um arquivo
+		
+```
+cp
+cp -r
+
+cp nomedoArquivo nome_Para_Onde_A_Copia_Vai
+```
+	cria uma cópia de um arquivo / cria uma cópia de um diretório
+	
+```
+rm
+rm -rf
+```
+	remove um arquivo / remove uma pasta com conteúdo / apaga
+	
+```
+pwd
+```
+	mostra onde eu estou , todos os caminhos do diretório até mim
+	
+```
+*.txt
+```
+	todos os aquivos  .txt / o sinal do asterisco representa qualquer carácter sendo ele um ou mais 
+```
+exemplos do uso do *
+
+vinicius
+
+vi*us --> nici
+
+*us --> vinici
+
+viniciu* --> s
+```
+
+```
+ls
+ls -la
+ll
+```
+	mostra os arquivos / mostra arquivos ocultos
+
+```
+cat 
+cat >
+cat >>
+```
+	mostra, imprime o conteúdo do arquivo na tela / atribui  um conteúdo ao arquivo /  adiciona um conteúdo ao arquivo
+		nota: o sinal >> adiciona ao final sem apagar o conteúdo, mas o sinal > apaga todo conteúdo e adiciona
+
+```
+head
+tail
+```
+	mostra as primeiras 10 linhas do arquivo / mostra as ultimas 10 linhas do arquivo
+	
+```
+grep
+grep -i
+grep -iv
+grep -in
+grep -c
+
+grep -i 'palavra ou frase que quer procurar' nome_do_aquivo
+```
+	[CTRL+F] encontra, acha, procura, busca, pesquisa , uma frase ou uma palavra (frases demarcadas entre aspas 'exemplo' palavras soltas não precisa de aspas)/ 
+		case sensitive ( letras MAIÚSCULAS E MINUSCULAS IMPORTAM) / 
+			( -i ) não case sensitive (letras maiúsculas e MAIÚSCULAS E MINUSCULAS NÃO IMPORTAM ) /  
+			mostra tudo menos a palavra  / 
+				( -iv ) mostra tudo menos a palavra ou frase marcada /
+					( -in ) encontra a linha que a frase se encontra
+						( -ic ) diz quantas vezes a palavra se repete
+						
+```
+wc 
+wc -w
+wc -l
+wc -c
+```
+	conta a quantidade de palavras, linhas , caracteres
+		-w palavras
+			-l linhas 
+				-c caracteres
+
