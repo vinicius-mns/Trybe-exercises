@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        section {
+            height: 200px;
+            width: 200px;
+            background-color: black;
+            margin: 10px;
+            display: inline-block;
+        }
+    </style>
+    <section class="paz" onclick="foi()">
+
+    </section>
+
+    <section class="paz" onclick="iof()"> 
+
+    </section>
+    <script>
+
+        function foi() {
+            for(let index = 0; index < document.querySelectorAll('.paz').length; index += 1) {
+                document.querySelectorAll('.paz')[index].style.backgroundColor = 'green'
+            }   
+        }
+        
+        function iof() {
+            for(let index = 0; index < document.querySelectorAll('.paz').length; index += 1) {
+                document.querySelectorAll('.paz')[index].style.backgroundColor = 'brown'
+            }   
+        }
+
+    </script>
+</body>
+</html>
