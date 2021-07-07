@@ -39,6 +39,27 @@
         <p>Texto padrão do nosso site</p>
         <p>-----</p>
         <p>Trybe</p>
+        <input type="button" value="Um" onclick="um()">
+        <input type="button" value="Dois" onclick="dois()">
+        <input type="button" value="Tres" onclick="tres()">
+        <input type="button" value="Quatro" onclick="quatro()">
+        <input type="button" value="Cinco" onclick="cinco()">
+        <input type="button" value="Seis" onclick="seis()">
+      </section>
+      <section class="center-content">
+        <ol>
+            <li>Um - Crie uma função que mude o texto na tag &lt;P&gt para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)</li>
+            
+            <li>Dois - Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).</li>
+            
+            <li>Tres - Crie uma função que mude a cor do quadrado vermelho para branco.</li>
+            
+            <li>Quatro - Crie uma função que corrija o texto da tag &lt;h1&gt.</li>
+            
+            <li>Cinco - Crie uma função que modifique todo o texto da tag &lt;P&gt para maiúsculo.</li>
+
+            <li>Crie uma função que exiba o conteúdo de todas as tags &lt;P&gt no console.</li>       
+        </ol>
       </section>
     </main>
     <script>
@@ -54,6 +75,39 @@
  Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
  Crie uma função que exiba o conteúdo de todas as tags <p> no console.
         */
+
+        function um() {
+          document.querySelectorAll('p')[1].innerText = "Feliz"
+        }
+
+        function dois() {
+          document.querySelector('.main-content').style.backgroundColor = 'rgb(76,164,109)'
+        }
+
+        function tres() {
+          for(let index = 0; index < document.querySelectorAll('.center-content').length; index += 1) {
+                document.querySelectorAll('.center-content')[index].style.backgroundColor = 'white'
+            }
+        }
+
+        function quatro() {
+          document.querySelector('h1').innerText = 'Exercício 5.1 - JavaScript'
+        }
+
+        function cinco() {
+          let par = document.querySelector('p')
+          par.innerHTML = par.innerHTML.toUpperCase()
+        }
+    
+        function seis(){
+          for (let index = 0; index < document.querySelectorAll('p').length; index += 1) {
+            console.log (document.querySelectorAll('p')[index].innerText)
+          }
+        }
+    
+        
+    
+
     </script>
   </body>
 </html>
