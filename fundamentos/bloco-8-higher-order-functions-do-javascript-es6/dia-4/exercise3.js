@@ -62,11 +62,16 @@ const books = [
     releaseYear: 1928,
   },
 ];
-// 1 - Encontre o nome da primeira pessoa autora do livro nascida no ano de 1947.
-// Adicione o código do exercício aqui:
 
-function authorBornIn1947() {
-  return books.find((pessoa) => pessoa.author.birthYear === 1947).author.name
+// 3 - Calcule a média de idade que as pessoas autoras tinham quando seus respectivos livros foram lançados.
+
+const expectedResult = 43;
+
+function averageAge() {
+  const idade = books.reduce((idade) => (idade.releaseYear - idade.author.birthYear))
+  //return books.reduce((media, idade) => (media + idade) / idade)
+  return idade
 }
+console.log (averageAge())
 
-  assert.strictEqual(authorBornIn1947(), 'Stephen King');
+// assert.strictEqual(averageAge(), expectedResult);

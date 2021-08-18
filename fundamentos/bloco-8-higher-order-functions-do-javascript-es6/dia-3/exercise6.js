@@ -62,11 +62,18 @@ const books = [
     releaseYear: 1928,
   },
 ];
-// 1 - Encontre o nome da primeira pessoa autora do livro nascida no ano de 1947.
-// Adicione o código do exercício aqui:
 
-function authorBornIn1947() {
-  return books.find((pessoa) => pessoa.author.birthYear === 1947).author.name
+//6 - Crie um array com o nome de todos os livros com mais de 60 anos de publicação.
+
+const expectedResult = [
+  'O Senhor dos Anéis',
+  'Fundação',
+  'O Chamado de Cthulhu',
+];
+
+function oldBooks() {
+  const maisDe60Anos = books.filter((livros) => livros.releaseYear <= (new Date().getFullYear() - 60))
+  return maisDe60Anos.map((livros) => livros.name)
 }
 
-  assert.strictEqual(authorBornIn1947(), 'Stephen King');
+assert.deepStrictEqual(oldBooks(), expectedResult);

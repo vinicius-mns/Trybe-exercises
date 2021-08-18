@@ -62,11 +62,19 @@ const books = [
     releaseYear: 1928,
   },
 ];
-// 1 - Encontre o nome da primeira pessoa autora do livro nascida no ano de 1947.
-// Adicione o código do exercício aqui:
 
-function authorBornIn1947() {
-  return books.find((pessoa) => pessoa.author.birthYear === 1947).author.name
+//5 - Crie um array em ordem alfabética apenas com os nomes de todas as pessoas autoras de ficção científica ou fantasia.
+
+const expectedResult = [
+  'Frank Herbert',
+  'George R. R. Martin',
+  'Isaac Asimov',
+  'J. R. R. Tolkien',
+];
+
+function fantasyOrScienceFictionAuthors() {
+  const nomes = books.filter((nome) => nome.genre === 'Ficção Científica' || nome.genre === 'Fantasia')
+  return nomes.map((nome) => nome.author.name).sort()
 }
 
-  assert.strictEqual(authorBornIn1947(), 'Stephen King');
+assert.deepStrictEqual(fantasyOrScienceFictionAuthors(), expectedResult);

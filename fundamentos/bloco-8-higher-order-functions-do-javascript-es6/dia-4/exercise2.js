@@ -62,11 +62,22 @@ const books = [
     releaseYear: 1928,
   },
 ];
-// 1 - Encontre o nome da primeira pessoa autora do livro nascida no ano de 1947.
-// Adicione o código do exercício aqui:
 
-function authorBornIn1947() {
-  return books.find((pessoa) => pessoa.author.birthYear === 1947).author.name
+// 2 - Crie uma string com os nomes de todas as pessoas autoras.
+
+const expectedResult = "George R. R. Martin, J. R. R. Tolkien, Isaac Asimov, Frank Herbert, Stephen King, H. P. Lovecraft.";
+
+function reduceNames() {
+  let resposta = books.reduce((string, agregador) => {
+    let resposta = string.concat(`${agregador.author.name}, `)
+    return resposta
+  },'')
+
+  return resposta.slice(0,-2).concat('.')
+
 }
 
-  assert.strictEqual(authorBornIn1947(), 'Stephen King');
+assert.strictEqual(reduceNames(), expectedResult);
+
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/slice

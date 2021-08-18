@@ -62,11 +62,14 @@ const books = [
     releaseYear: 1928,
   },
 ];
-// 1 - Encontre o nome da primeira pessoa autora do livro nascida no ano de 1947.
-// Adicione o código do exercício aqui:
 
-function authorBornIn1947() {
-  return books.find((pessoa) => pessoa.author.birthYear === 1947).author.name
+// 7 - Encontre o nome do livro escrito pela pessoa cujo nome registrado começa com três iniciais.
+
+const expectedResult = 'O Senhor dos Anéis';
+
+function authorWith3DotsOnName() {
 }
 
-  assert.strictEqual(authorBornIn1947(), 'Stephen King');
+console.log (authorWith3DotsOnName())
+
+//assert.deepStrictEqual(authorWith3DotsOnName(), expectedResult);

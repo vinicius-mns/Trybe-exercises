@@ -1,4 +1,5 @@
 const assert = require('assert');
+const { get } = require('http');
 
 const books = [
   {
@@ -62,11 +63,15 @@ const books = [
     releaseYear: 1928,
   },
 ];
-// 1 - Encontre o nome da primeira pessoa autora do livro nascida no ano de 1947.
-// Adicione o código do exercício aqui:
 
-function authorBornIn1947() {
-  return books.find((pessoa) => pessoa.author.birthYear === 1947).author.name
+// 7 - Faça uma função que retorne true , caso nenhum author tenha nascido no mesmo ano, e false , caso contrário.
+
+const expectedResult = false;
+
+console.log (books[0].author.birthYear)
+
+function authorUnique() {
+  // return books.some((idades) => idades.author.birthYear === anoDetodos)
 }
 
-  assert.strictEqual(authorBornIn1947(), 'Stephen King');
+assert.strictEqual(authorUnique(), expectedResult);

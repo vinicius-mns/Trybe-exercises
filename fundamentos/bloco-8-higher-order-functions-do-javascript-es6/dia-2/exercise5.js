@@ -1,4 +1,5 @@
 const assert = require('assert');
+const { get } = require('http');
 
 const books = [
   {
@@ -62,11 +63,14 @@ const books = [
     releaseYear: 1928,
   },
 ];
-// 1 - Encontre o nome da primeira pessoa autora do livro nascida no ano de 1947.
-// Adicione o código do exercício aqui:
 
-function authorBornIn1947() {
-  return books.find((pessoa) => pessoa.author.birthYear === 1947).author.name
+// 5 - Faça uma função que retorne true , se todas as pessoas autoras nasceram no século XX, ou false , caso contrário.
+
+const expectedResult = false;
+const ehSeculoXX = (xx) => xx >= 1901 && xx <= 2000
+
+function everyoneWasBornOnSecXX() {
+  return books.every((pessoas) => ehSeculoXX (pessoas.author.birthYear))
 }
 
-  assert.strictEqual(authorBornIn1947(), 'Stephen King');
+assert.strictEqual(everyoneWasBornOnSecXX(), expectedResult);

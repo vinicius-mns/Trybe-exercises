@@ -62,11 +62,44 @@ const books = [
     releaseYear: 1928,
   },
 ];
-// 1 - Encontre o nome da primeira pessoa autora do livro nascida no ano de 1947.
-// Adicione o código do exercício aqui:
 
-function authorBornIn1947() {
-  return books.find((pessoa) => pessoa.author.birthYear === 1947).author.name
+//2 - Construa um array de objetos a partir do array de livros. Cada objeto deve conter uma propriedade author , com o nome da pessoa autora do livro, e uma propriedade age com a idade dessa pessoa quando o livro foi lançado. O array deve ser ordenado por idade, ou seja, da pessoa mais jovem para a mais velha considerando suas idades quando o livro foi lançado.
+
+const expectedResult = [
+  {
+    age: 31,
+    author: 'Isaac Asimov',
+  },
+  {
+    age: 38,
+    author: 'H. P. Lovecraft',
+  },
+  {
+    age: 39,
+    author: 'Stephen King',
+  },
+  {
+    age: 43,
+    author: 'George R. R. Martin',
+  },
+  {
+    age: 45,
+    author: 'Frank Herbert',
+  },
+  {
+    age: 62,
+    author: 'J. R. R. Tolkien',
+  },
+];
+
+const IdadeNoLancamento = books.map((batata) => batata.releaseYear - batata.author.birthYear) 
+
+function nameAndAge() {
+  const resposta = books.map((autorIdade,index)=> ({
+    'age': IdadeNoLancamento[index],
+    'author': autorIdade.author.name,
+  }))
+ return resposta.sort((a, b) => a.age - b.age)
 }
 
-  assert.strictEqual(authorBornIn1947(), 'Stephen King');
+assert.deepStrictEqual(nameAndAge(), expectedResult);
