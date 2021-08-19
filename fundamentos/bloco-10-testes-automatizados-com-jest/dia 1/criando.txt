@@ -1,0 +1,15 @@
+crindo pasta package.json 
+  npm init -y
+  autere "test": "echo \"Error: no test specified\" && exit 1"
+  para "teste": "jest"
+
+instalando o jest
+  npm install --save-dev jest
+
+colocar a pasta node_modules em .gitignore
+
+discribe('uma pequena descrcao geral do bloco de testes', () => {
+  test('uma pequena descricao do teste unitario', () => {
+    expect(aqui vc chama o test).toBe(aqui a gente coloca o resultado esperado)
+  })
+})
